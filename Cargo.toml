@@ -1,0 +1,21 @@
+[package]
+name = "shavian.rs"
+version = "0.0.1"
+edition = "2021"
+license = "MIT"
+description = "A highly opinionated wrapper around git that works with subrepos in an intuitive way"
+homepage = "https://github.com/marcesquerra/shavian.rs"
+exclude = [
+  "nix/*",
+  ".envrc",
+  "shell.nix"
+]
+
+[[bin]]
+name = "md2shv"
+path = "src/main.rs"
+
+[dependencies]
+carapace_spec_clap = "0.1.11"
+clap = { version = "4.3.8", features = ["cargo", "derive"] }
+clap_complete = "4.3.1"
